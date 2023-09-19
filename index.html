@@ -10,6 +10,9 @@
     <link rel="icon" href="/Content/favicon.png" type="image/png">
 </head>
 <body>
+    <div class="parallax">
+    <div class="parallax-background"></div>
+    <div class="parallax-content">
     <div class="wrapper">
         <div class="topnav">
             <a href="index.html">Home</a>
@@ -19,8 +22,13 @@
         <div class="row">
             <div class="leftcolumn">
                 <div class="blur-background"></div>
-                <h1>Left Column</h1>
-                <p>Placeholder.</p>
+                <div>
+                    <p>
+                        <h1>Column</h1>
+                    Placeholder.
+                    </p>
+                </div>
+
             </div>
 
             <div class="rightcolumn">
@@ -54,6 +62,8 @@
             </div>
         </div>
     </div>
+    </div>
+    </div>
 
      <!-- JavaScript to fetch the now-playing song from Last.fm -->
     <script>
@@ -80,6 +90,17 @@
       
         // Call the function to get and display the now-playing song
         getNowPlaying();
+      </script>
+
+      <script>
+        const parallaxContainer = document.querySelector('.parallax');
+        const parallaxBackground = document.querySelector('.parallax-background');
+
+        parallaxContainer.addEventListener('scroll', function () {
+        const scrollPosition = parallaxContainer.scrollTop;
+        parallaxBackground.style.transform = `translateY(${scrollPosition * -0.5}px)`;
+        });
+
       </script>
       
 </body>
