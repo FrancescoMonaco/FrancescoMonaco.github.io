@@ -8,6 +8,15 @@
          url('./fonts/NotoSans-Regular.ttf') format('truetype'),          /* Safari, Android, iOS */
          url('./fonts/NotoSans-Regular.ttf') format('svg');               /* Legacy iOS */
 }
+/* Set the background image and initial positioning */
+body {
+    background-image: url('/Content/key_ig.png'); /* Replace 'your-image.jpg' with your image file path */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(0.5px);
+    background-size: cover;
+  }
 /* Header */
 .header {
   background-color: #F1F1F1;
@@ -34,9 +43,16 @@
   background-color: #8dcea5;
   color: #1f2929;
 }
+/* Wrap the content of the page */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 /* Create three unequal columns that floats next to each other */
 .row {
     display: flex;
+    flex-grow: 1;
     flex-wrap: wrap;
   }
 /* Left column */

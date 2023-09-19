@@ -9,33 +9,34 @@
     <link rel="stylesheet" type="text/css" href="/CSS/style.css">
 </head>
 <body>
-    <div class="topnav">
-        <a href="index.html">Home</a>
-        <a href="https://github.com/FrancescoMonaco">Github</a>
-    </div>
-
-    <div class="row">
-        <div class="leftcolumn">
-            <h1>Left Column</h1>
-            <p>Placeholder.</p>
+    <div class="wrapper">
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="https://github.com/FrancescoMonaco">Github</a>
         </div>
 
-        <div class="rightcolumn">
-            <h2>Right Column</h2>
-            <p>Placeholder.</p>
+        <div class="row">
+            <div class="leftcolumn">
+                <h1>Left Column</h1>
+                <p>Placeholder.</p>
+            </div>
+
+            <div class="rightcolumn">
+                <h2>Right Column</h2>
+                <p>Placeholder.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="now-playing">
+                <img id="song-artwork" src="" alt="Song Artwork">
+                <p>Now Playing:</p>
+                <p id="song-info"></p>
+            </div>
         </div>
     </div>
-    <div class="footer">
-        <div id="now-playing">
-            <img id="song-artwork" src="" alt="Song Artwork">
-            <p>Now Playing:</p>
-            <p id="song-info"></p>
-          </div>
-    </div>
-
      <!-- JavaScript to fetch the now-playing song from Last.fm -->
     <script>
-        const apiKey = '033c98c8bcfa32b05b34dc1f073dc121';
+        const apiKey = process.env.LASTFM_API_KEY;
         const username = 'Piowithoutblood';
       
         async function getNowPlaying() {
