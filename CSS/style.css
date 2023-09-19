@@ -58,25 +58,31 @@ body {
   flex-direction: column;
 }
 
+.container {
+  position: relative; /* Ensure relative positioning for child elements */
+}
+
+
 /* Create three unequal columns that float next to each other */
 .row {
   display: flex;
-  flex-grow: 1;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap:nowrap;
 }
 
 /* Left column */
 .leftcolumn {
   position: relative; /* Add position relative */
   float: left;
-  color: #93c2c2;
+  color: #8dcea5;
   font-family: 'CustomFont', sans-serif;
-  width: 20%;
-  padding: 10px;
+  width: 34%;
+  padding: 10px 10px 10px 10px;
   margin-top: 20px;
   border-radius: 10px; /* Add rounded borders */
-  margin-right: 10px; /* Add spacing between columns */
+  margin-right: 5px; /* Add spacing between columns */
   background-color: transparent; /* Set a transparent background */
+  text-align: center;
   z-index: 2;
 }
 
@@ -88,9 +94,11 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  backdrop-filter: blur(20px); /* Strong blur effect */
+  backdrop-filter: blur(20px) brightness(70%) saturate(270%); /* Strong blur effect */
   z-index: -1; /* Place it behind the content */
+  background-color: rgba(0, 106, 63, 0.25); /* Adjust color and opacity */
 }
+
 .parallax {
   position: relative;
   overflow: hidden;
@@ -101,8 +109,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-image: url('/Content/key_ig.png');
+  height: 250%;
+  background-image: url('/Content/verti_bg.png');
   background-size: cover;
   transform: translate3d(0, 0, 0);
 }
@@ -116,12 +124,12 @@ body {
 
 /* Right column */
 .rightcolumn {
-  float: right;
-  width: 75%;
+  width: 64%;
   color: #8dcea5;
   font-family: 'CustomFont', sans-serif;
-  background-color: #1f2929;
-  padding-left: 20px;
+  text-align: center;
+  background-color: transparent; /* Set a transparent background */
+  padding: 10px;
   margin-top: 20px;
   border-radius: 10px; /* Add rounded borders */
   z-index: 2;
@@ -149,11 +157,13 @@ body {
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-    margin-right: 0; /* Remove spacing between columns */
-    border-radius: 0; /* Remove rounded borders */
+  .row {
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%; /* Make columns full width on mobile */
   }
 }
 
@@ -188,6 +198,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   margin: 10px 0;
+  text-align: left;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

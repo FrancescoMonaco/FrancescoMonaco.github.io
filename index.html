@@ -24,22 +24,33 @@
                 <div class="blur-background"></div>
                 <div>
                     <p>
-                        <h1>Column</h1>
-                    Placeholder.
+                        <h1>Hi there,</h1>
+                        <h2>I'm Francesco Pio</h2>
+                    I'm a student of computer engineering with a focus on AI and robotics.
+                    </p>
+                    <p>
+                    My actual interests are in the fields of Natural Language Processing, Algorithmic Fairness and Clustering.
+                    </p>
+                    <p>
+                        Also, this site is still under construction, don't be mad at me.
                     </p>
                 </div>
 
             </div>
 
             <div class="rightcolumn">
-                <h2>Pinned Work</h2>
-                
+                <div class="container">
+                <div class="blur-background"></div>
+                <p>&nbsp;</p>
+                <p>
+                    <h2>Pinned Work</h2>
+                </p>
                 <!-- First Repository -->
                 <div class="repository">
                     <h3><a href="https://github.com/FrancescoMonaco/ArcEager">ArcEager</a></h3>
                     <p>
                         A project to do dependency parsing using the ArcEager algorithm, using both LSTMs
-                        and transformers using fine-tuning.
+                        and transformers via fine-tuning.
                     </p>
                 </div>
                 
@@ -51,8 +62,8 @@
                         and providing a comparison between them. This project is strictly related to my Bachelor's thesis.
                     </p>
                 </div>
+                </div>
             </div>
-            
         </div>
         <div class="footer">
             <div id="now-playing">
@@ -93,14 +104,12 @@
       </script>
 
       <script>
-        const parallaxContainer = document.querySelector('.parallax');
         const parallaxBackground = document.querySelector('.parallax-background');
 
-        parallaxContainer.addEventListener('scroll', function () {
-        const scrollPosition = parallaxContainer.scrollTop;
-        parallaxBackground.style.transform = `translateY(${scrollPosition * -0.5}px)`;
+        window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY; // Get the scroll position
+        parallaxBackground.style.transform = `translateY(${scrollPosition * -1.5}px)`;
         });
-
       </script>
       
 </body>
