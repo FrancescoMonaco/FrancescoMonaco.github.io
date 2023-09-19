@@ -18,16 +18,21 @@ body {
     background-size: cover;
   }
 /* Header */
+/* Header */
 .header {
   background-color: #F1F1F1;
   padding: 20px;
   text-align: center;
+  border-radius: 10px; /* Add rounded borders */
 }
+
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
   background-color: #1f2929;
+  border-radius: 10px; /* Add rounded borders */
 }
+
 /* Style the topnav links */
 .topnav a {
   float: left;
@@ -37,32 +42,56 @@ body {
   padding: 14px 16px;
   font-family: 'CustomFont', sans-serif;
   text-decoration: none;
+  border-radius: 5px; /* Add rounded borders */
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
 }
-/* Change color on hover */
+
+/* Change color and background on hover */
 .topnav a:hover {
   background-color: #8dcea5;
   color: #1f2929;
 }
+
 /* Wrap the content of the page */
 .wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-/* Create three unequal columns that floats next to each other */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Create three unequal columns that float next to each other */
 .row {
-    display: flex;
-    flex-grow: 1;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
 /* Left column */
-.leftcolumn {  
-  float: left; 
-  color: #1f2929;
+.leftcolumn {
+  position: relative; /* Add position relative */
+  float: left;
+  color: #93c2c2;
   font-family: 'CustomFont', sans-serif;
   width: 20%;
   padding: 10px;
+  border-radius: 10px; /* Add rounded borders */
+  margin-right: 10px; /* Add spacing between columns */
+  background-color: transparent; /* Set a transparent background */
 }
+
+/*Blurrer*/
+.blur-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px); /* Strong blur effect */
+  z-index: -1; /* Place it behind the content */
+}
+
+
+
 /* Right column */
 .rightcolumn {
   float: right;
@@ -71,25 +100,18 @@ body {
   font-family: 'CustomFont', sans-serif;
   background-color: #1f2929;
   padding-left: 20px;
+  border-radius: 10px; /* Add rounded borders */
 }
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-/* Add a card effect for articles */
+
+/* Card effect for articles */
 .card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px; /* Add rounded borders */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 /* Footer */
 .footer {
   padding: 20px;
@@ -97,12 +119,16 @@ body {
   color: #8dcea5;
   background: #1f2929;
   margin-top: 20px;
+  border-radius: 10px; /* Add rounded borders */
 }
+
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .leftcolumn, .rightcolumn {   
+  .leftcolumn, .rightcolumn {
     width: 100%;
     padding: 0;
+    margin-right: 0; /* Remove spacing between columns */
+    border-radius: 0; /* Remove rounded borders */
   }
 }
 
@@ -129,3 +155,26 @@ body {
     font-weight: bold;
     margin: 0;
   }
+
+  /* Github style */
+  /* Add this CSS to your existing styles */
+.repository {
+  background-color: #162424;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.repository h3 {
+  font-size: 1.2rem;
+}
+
+.repository a {
+  color: #93c2c2;
+  text-decoration: none;
+}
+
+.repository a:hover {
+  text-decoration: underline;
+}
