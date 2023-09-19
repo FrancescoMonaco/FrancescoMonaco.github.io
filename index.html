@@ -6,14 +6,47 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.php">Home</a>
+    <div class="topnav">
+        <a href="index.html">Home</a>
         <a href="https://github.com/FrancescoMonaco">Github</a>
     </div>
-    <div class="content">
+    <div class="leftcolumn">
         <h1>Home</h1>
         <p>Placeholder.</p>
     </div>
+    <div class="rightcolumn">
+        <h2>Right Column</h2>
+        <p>Placeholder.</p>
+    </div>
+    <div class="footer">
+        <div id="now-playing">
+            <img id="song-artwork" src="" alt="Song Artwork">
+            <p>Now Playing:</p>
+            <p id="song-info"></p>
+          </div>
+    </div>
+
+     <!-- JavaScript to fetch the now-playing song from Last.fm -->
+    <script>
+        const apiKey = '033c98c8bcfa32b05b34dc1f073dc121';
+        const username = 'Piowithoutblood';
+      
+        async function getNowPlaying() {
+          try {
+            const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json`);
+            const data = await response.json();
+            const track = data.recenttracks.track[0];
+            const songInfo = `${track.name} by ${track.artist['#text']}`;
+            document.getElementById('song-info').textContent = songInfo;
+          } catch (error) {
+            console.error('Error fetching data from Last.fm:', error);
+          }
+        }
+      
+        // Call the function to get and display the now-playing song
+        getNowPlaying();
+      </script>
+      
 </body>
 
 </html>
