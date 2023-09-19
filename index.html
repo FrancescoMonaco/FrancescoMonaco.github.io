@@ -1,22 +1,29 @@
 <!DOCTYPE html>
+<html lang="en"></html>
 <html>
 <!-- Head, a navbar that offers access to home and github -->
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/style.css">
 </head>
 <body>
     <div class="topnav">
         <a href="index.html">Home</a>
         <a href="https://github.com/FrancescoMonaco">Github</a>
     </div>
-    <div class="leftcolumn">
-        <h1>Home</h1>
-        <p>Placeholder.</p>
-    </div>
-    <div class="rightcolumn">
-        <h2>Right Column</h2>
-        <p>Placeholder.</p>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <h1>Left Column</h1>
+            <p>Placeholder.</p>
+        </div>
+
+        <div class="rightcolumn">
+            <h2>Right Column</h2>
+            <p>Placeholder.</p>
+        </div>
     </div>
     <div class="footer">
         <div id="now-playing">
@@ -37,6 +44,12 @@
             const data = await response.json();
             const track = data.recenttracks.track[0];
             const songInfo = `${track.name} by ${track.artist['#text']}`;
+            const songArtwork = track.image[2]['#text']; // Use the URL of the artwork
+
+            // Update the song artwork image
+            const artworkImage = document.getElementById('song-artwork');
+            artworkImage.src = songArtwork;
+
             document.getElementById('song-info').textContent = songInfo;
           } catch (error) {
             console.error('Error fetching data from Last.fm:', error);

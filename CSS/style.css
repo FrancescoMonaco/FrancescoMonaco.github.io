@@ -35,17 +35,24 @@
   color: #1f2929;
 }
 /* Create three unequal columns that floats next to each other */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
 /* Left column */
-.leftcolumn {   
-  float: left;
-  color: #8dcea5;
-  width: 25%;
+.leftcolumn {  
+  float: left; 
+  color: #1f2929;
+  font-family: 'CustomFont', sans-serif;
+  width: 20%;
+  padding: 10px;
 }
 /* Right column */
 .rightcolumn {
   float: right;
   width: 75%;
   color: #8dcea5;
+  font-family: 'CustomFont', sans-serif;
   background-color: #1f2929;
   padding-left: 20px;
 }
@@ -86,6 +93,7 @@
 /*Last.fm style*/
 #now-playing {
     display: flex;
+    font-family: 'CustomFont', sans-serif;
     align-items: center;
     justify-content: center;
   }
@@ -98,6 +106,7 @@
 
   #song-details {
     text-align: left;
+    font-family: 'CustomFont', sans-serif;
   }
 
   #song-info {
