@@ -131,6 +131,14 @@
         getNowPlaying();
       </script>
 
+      <script>
+            // Parallax effect
+            window.addEventListener('scroll', function() {
+              const scrollPosition = window.scrollY;
+              const parallaxBackground = document.querySelector('.parallax-background');
+              parallaxBackground.style.transform = `translate3d(0, -${scrollPosition * 0.5}px, 0)`;
+            });
+       </script>
       
 </body>
 
