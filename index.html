@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FPM</title>
     <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/parallax.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/topbar.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/Content/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/Content/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/Content/icons/favicon-16x16.png">
@@ -18,50 +20,57 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/FrancescoMonaco">Github</a>
+        <a href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/francesco+pio-monaco/2ac78b4c-d81a-46d4-8b46-58fa6bb1b8e6?view=html">CV</a>
+    </div>
+
     <div class="parallax">
-    <div class="parallax-background"></div>
+    <div class="parallax-background">
     <div class="parallax-content">
     <div class="wrapper">
-        <div class="topnav">
-            <a href="index.html">Home</a>
-            <a href="https://github.com/FrancescoMonaco">Github</a>
-            <a href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/francesco+pio-monaco/2ac78b4c-d81a-46d4-8b46-58fa6bb1b8e6?view=html">CV</a>
-        </div>
+
 
         <div class="row">
             <div class="leftcolumn">
-                <div class="blur-background"></div>
-                <div>
-                    <p>
-                        <h1>Hi there,</h1>
-                        <h2>I'm Francesco Pio</h2>
-                    I'm a student of computer engineering with a focus on AI and robotics.
-                    </p>
-                    <p>
-                    My actual interests are in the fields of Natural Language Processing, Algorithmic Fairness and Clustering.
-                    </p>
-                    <p>
-                        Also, this site is still under construction, don't be mad at me.
-                    </p>
-                </div>
-
-            </div>
+                <div class="blur-background">
+                    <div>
+                        <p>&nbsp;</p>
+                        <p class = "serif-font">
+                                <h1>Hi there,</h1>
+                                <h2>I'm Francesco Pio</h2></p>
+                        <p>
+                        I'm a student of computer engineering with a focus on AI and robotics.
+                        </p>
+                        <p>
+                        My actual interests are in the fields of Natural Language Processing, Algorithmic Fairness and Motif Discovery.
+                        </p>
+                        <p>
+                            Also, this site is still under construction, don't be mad at me.
+                        </p>
+                    </div>
+                    <p>&nbsp;</p>
+                </div> <!-- End of blurrer -->
+            </div> <!-- End of left column -->
 
             <div class="rightcolumn">
                 <div class="container">
-                <div class="blur-background"></div>
+                <div class="blur-background">
                 <p>&nbsp;</p>
-                <p>
-                    <h2>Pinned Work</h2>
+                <p class="serif-font">
+                        <h2>Pinned Work</h2>
                 </p>
                 <!-- First Repository -->
                 <div class="repository">
-                    <h3><a href="https://github.com/FrancescoMonaco/ArcEager">ArcEager Parser</a></h3>
+                    <h3><a href="https://github.com/FrancescoMonaco/LFN_Project">Graph based analysis of the functional connectome in neuropsychiatric disorders</a></h3>
                     <p>
-                        A project to do dependency parsing with the ArcEager algorithm, using both LSTMs
-                        and transformers via fine-tuning.
+                        The aim of this project is to discuss how the brain changes in different diseases by representing the brain as a
+                        network and then applying meaningful metrics to report features that can underline the impact of the disease on the
+                        whole brain network. The focus is on neuropsychiatric disorders such as bipolar disorder, ADHD, and
+                        schizophrenia.
                     </p>
-                </div>
+                </div> 
                 
                 <!-- Second Repository -->
                 <div class="repository">
@@ -83,27 +92,27 @@
 
                 <!-- Fourth Repository -->
                 <div class="repository">
-                    <h3><a href="https://github.com/FrancescoMonaco/LFN_Project">Graph based analysis of the functional connectome in neuropsychiatric disorders</a></h3>
+                    <h3><a href="https://github.com/FrancescoMonaco/ArcEager">ArcEager Parser</a></h3>
                     <p>
-                        The aim of this project is to discuss how the brain changes in different diseases by representing the brain as a
-                        network and then applying meaningful metrics to report features that can underline the impact of the disease on the
-                        whole brain network. The focus is on neuropsychiatric disorders such as bipolar disorder, ADHD, and
-                        schizophrenia.
+                        A project to do dependency parsing with the ArcEager algorithm, using both LSTMs
+                        and transformers via fine-tuning.
                     </p>
-                </div> 
-            </div>
-        </div>
-        <div class="footer">
-            <div id="now-playing">
+                </div>
+            </div> <!-- End of blurrer -->
+            </div> <!-- End of right column -->
+        </div> <!-- End of row -->
+    </div> <!-- End of wrapper -->
+            <!-- Footer -->
+            <div class="footer">
+                <div id="now-playing">
                 <img id="song-artwork" src="" alt="Song Artwork">
-                <p>Now Playing:&nbsp;</p>
-                <p id="song-info"></p>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-
+                 <p>Now Playing:&nbsp;</p>
+                 <p id="song-info"></p>
+                </div>
+             </div> <!-- End of footer -->
+    </div> <!-- End of parallax content -->
+    </div> <!-- End of parallax background -->
+    </div> <!-- End of parallax -->
      <!-- JavaScript to fetch the now-playing song from Last.fm -->
     <script>
         const apiKey = '033c98c8bcfa32b05b34dc1f073dc121';
