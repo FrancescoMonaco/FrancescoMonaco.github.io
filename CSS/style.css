@@ -50,7 +50,7 @@ body {
   color: #8dcea5;
   font-family: 'CustomFont', sans-serif;
   width: 34%;
-  margin-top: 20px;
+  margin-top: 45px;
   border-radius: 10px; /* Add rounded borders */
   background-color: transparent; /* Set a transparent background */
   text-align: center;
@@ -81,7 +81,7 @@ body {
   font-family: 'CustomFont', sans-serif;
   text-align: center;
   background-color: transparent; /* Set a transparent background */
-  margin-top: 20px;
+  margin-top: 10px;
   border-radius: 10px; /* Add rounded borders */
   z-index: 2;
 }
@@ -103,7 +103,7 @@ body {
   text-align: center;
   color: #8dcea5;
   backdrop-filter: blur(10px) brightness(170%) saturate(500%); /* Strong blur effect */
-  background-color: rgba(0, 106, 63, 0.5); /* Adjust color and opacity */
+  background-color: #1f2929; /* Adjust color and opacity */
   margin-top: 20px;
   border-radius: 10px; /* Add rounded borders */
   z-index: 2;
@@ -125,6 +125,7 @@ body {
 @media (min-width: 601px) {
   .leftcolumn,
   .rightcolumn {
+    margin-top: 40px;
     margin-bottom: auto;
     padding: 10px 10px 10px 10px;
   }

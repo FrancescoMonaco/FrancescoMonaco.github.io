@@ -1,7 +1,7 @@
 /* Style the top navigation bar */
 .topnav {
     position:fixed;
-    top: 0;
+    top: 5px;
     left: 0;
     width: 100%;
     z-index: 99;

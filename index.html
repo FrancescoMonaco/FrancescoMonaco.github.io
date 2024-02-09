@@ -18,20 +18,17 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/Content/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <div class="topnav">
-        <a href="index.html">Home</a>
+        <a id="homeLink">Home</a>
         <a href="https://github.com/FrancescoMonaco">Github</a>
         <a href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/francesco+pio-monaco/2ac78b4c-d81a-46d4-8b46-58fa6bb1b8e6?view=html">CV</a>
     </div>
 
-    <div class="parallax">
-    <div class="parallax-background">
-    <div class="parallax-content">
+    <img class="parallax-image" src="/Content/vertical_site_xs.png" alt="Parallax Image">
     <div class="wrapper">
-
-
         <div class="row">
             <div class="leftcolumn">
                 <div class="blur-background">
@@ -102,6 +99,7 @@
             </div> <!-- End of right column -->
         </div> <!-- End of row -->
     </div> <!-- End of wrapper -->
+
             <!-- Footer -->
             <div class="footer">
                 <div id="now-playing">
@@ -110,9 +108,8 @@
                  <p id="song-info"></p>
                 </div>
              </div> <!-- End of footer -->
-    </div> <!-- End of parallax content -->
-    </div> <!-- End of parallax background -->
-    </div> <!-- End of parallax -->
+    
+    <script scr="./js/after-script.js"></script>
      <!-- JavaScript to fetch the now-playing song from Last.fm -->
     <script>
         const apiKey = '033c98c8bcfa32b05b34dc1f073dc121';
@@ -139,15 +136,6 @@
         // Call the function to get and display the now-playing song
         getNowPlaying();
       </script>
-
-      <script>
-            // Parallax effect
-            window.addEventListener('scroll', function() {
-              const scrollPosition = window.scrollY;
-              const parallaxBackground = document.querySelector('.parallax-background');
-              parallaxBackground.style.transform = `translate3d(0, -${scrollPosition * 0.5}px, 0)`;
-            });
-       </script>
       
 </body>
 
