@@ -11,7 +11,12 @@
 
 @font-face {
   font-family: 'SerifFont';
-  src: url('./fonts/Mauline.otf') format('opentype');
+  src: url('./fonts/Mauline.ttf') format('opentype'),
+       url('./fonts/Mauline.ttf') format('truetype'),
+        url('./fonts/Mauline.ttf') format('woff'),
+        url('./fonts/Mauline.ttf') format('woff2'),
+        url('./fonts/Mauline.ttf') format('embedded-opentype'),
+        url('./fonts/Mauline.ttf') format('svg');
 }
 /* Set the background image and initial positioning */
 body {
@@ -59,6 +64,7 @@ body {
 
 .serif-font {
   font-family: 'SerifFont', serif;
+  margin-bottom: 0.1rem;
 }
 
 /*Blurrer*/
