@@ -1,6 +1,6 @@
 /* Style the top navigation bar */
 .topnav {
-    position:fixed;
+    position:sticky;
     top: 5px;
     left: 0;
     width: 100%;
