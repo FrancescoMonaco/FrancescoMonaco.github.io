@@ -76,7 +76,7 @@ body {
   height: 100%;
   border-radius: 10px;
   backdrop-filter: blur(10px) brightness(170%) saturate(700%); /* Strong blur effect */
-  z-index: -1; /* Place it behind the content */
+  z-index: 3; /* Place it behind the content */
   background-color: rgba(0, 106, 63, 0.5); /* Adjust color and opacity */
 }
 
@@ -180,11 +180,8 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.repository h3 {
-  font-size: 1.2rem;
-}
-
 .repository a {
+  font-size: 1.2rem;
   color: #93c2c2;
   text-decoration: none;
 }
