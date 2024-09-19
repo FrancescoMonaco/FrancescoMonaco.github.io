@@ -20,9 +20,9 @@
 }
 /* Set the background image and initial positioning */
 body {
-    background-image: url('/Content/dissolve.jpg'); 
+    background-color: #162424; 
     background-attachment: fixed;
-    backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(38.5px);
     background-size: fill;
   }
 
@@ -46,6 +46,7 @@ body {
   flex-direction: row;
   flex-wrap:nowrap;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 /* Left column */
@@ -75,7 +76,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  backdrop-filter: blur(10px) brightness(170%) saturate(700%); /* Strong blur effect */
+  backdrop-filter: blur(10px) brightness(300%) saturate(400%); /* Strong blur effect */
   z-index: 3; /* Place it behind the content */
   background-color: rgba(0, 106, 63, 0.5); /* Adjust color and opacity */
 }
@@ -108,10 +109,10 @@ body {
   width: 100%;
   text-align: center;
   color: #8dcea5;
-  backdrop-filter: blur(10px) brightness(170%) saturate(500%); /* Strong blur effect */
-  background-color: #1f2929; /* Adjust color and opacity */
+  backdrop-filter: blur(10px) brightness(300%) saturate(200%); /* Strong blur effect */
   margin-top: 20px;
   border-radius: 10px; /* Add rounded borders */
+  background-color: rgba(0, 106, 63, 0.5); /* Adjust color and opacity */
   z-index: 2;
 }
 
