@@ -7,19 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FPM</title>
     <link rel="stylesheet" type="text/css" href="/CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="/CSS/parallax.css">
-    <link rel="stylesheet" type="text/css" href="/CSS/topbar.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/Content/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/Content/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/Content/icons/favicon-16x16.png">
-    <link rel="manifest" href="/Content/icons/site.webmanifest">
-    <link rel="mask-icon" href="/Content/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/Content/icons/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/CSS/loading.css">
+    <link rel="icon" type="image/png" href="/Content/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/Content/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/Content/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Content/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/Content/icons/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/Content/icons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <script src="./js/script.js"></script>
-    <script src=".\js\after-script.js" defer></script>
+    <script src=".\js\loading.js" defer></script>
+    <script src=".\js\fetch-lastfm.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8X1KSYRYDL"></script>
@@ -31,123 +30,78 @@
   gtag('config', 'G-8X1KSYRYDL');
 </script>
 <body>
-    <div class="topnav">
-        <a id="homeLink">Home</a>
-        <a href="https://github.com/FrancescoMonaco">Github</a>
-        <a href="https://www.linkedin.com/in/francescopiomonaco/">LinkedIn</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+          <!-- Loading Screen -->
+    <div id="loading-screen">
+      <img src="/Content/Shell_shrink.gif" alt="Loading...">
     </div>
 
-    <img class="parallax-image" src="/Content/vertical_site_xs.png" alt="Parallax Image">
-    <div class="wrapper">
-        <div class="row">
-            <div class="leftcolumn">
-                <div class="blur-background">
-                    <div>
-                        <p>&nbsp;</p>
-                        <p class = "serif-font" style="font-size:xx-large; margin-top: 0;">
-                                Hi there, 
-                        </p>
-                        <p class = "serif-font" style="font-size: 1.7rem; margin-top: 0;">
-                            I'm Francesco Pio </p>
-                        <p>
-                        I'm a computer engineer interested in AI and robotics in the context of healthcare, mobility and multimedia.
-                        </p>
-                        <p>
-                        My main works are on Natural Language Processing, Algorithmic Fairness and Motif Discovery.
-                        </p>
-                        <p>
-                            Also, this site is still under construction, don't be mad at me.
-                        </p>
-                    </div>
-                    <p>&nbsp;</p>
-                </div> <!-- End of blurrer -->
-            </div> <!-- End of left column -->
+    <div class="container mt-5">
+      <h3 class="mb-3 general-font">Hey there,</h3>
+      <div class="mt-lg-0 mb-lg-3 base-font">
+        I'm Francesco, a computer engineer with a passion for creating horrible websites.</br>  
+        Currently I'm a research assistant at UniPD, where I work on scalable algorithms.</br>
+  
+      </div>
 
-            <div class="rightcolumn">
-                <div class="container">
-                <div class="blur-background">
-                <p>&nbsp;</p>
-                <p class="serif-font" style="font-size: xx-large; margin-top: 0cm;">
-                        Pinned Work
-                </p>
-                <!-- First Repository -->
-                <div class="repository">
-                    <h3><a href="https://github.com/FrancescoMonaco/LEIT-motifs" target="_blank">LEIT-motifs: scalable motif mining in multidimensional time series</a></h3>
-                    <p>
-                        An approximate method to find the top-<i>k</i> motifs with probabilistic guarantees 
-                         on the results and the cost of the operations based on <i>Locality Sensitive Hashing</i>.
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <!-- Box 1 -->
+            <div class="col-md-5 mx-2">
+                <div class="p-4 rounded bg-transparent shadow box">
+                  <h3 class="mb-3 title-font">News</h3> 
+                  <div class="last-fm-info"> 
+                    <img src="{{ cover_url }}" alt="Last.fm Track Cover">
+                    <h3>{{ track_name }}</h3>
+                  </div>
+                  <div class="scroll-container">
+                    <p class="scroll-text"> 
+                      &bull; Severe thunderstorm alert, remain indoors ϟ ☁ -7°C
+                      &bull; Kate Bush did 9/11, let's talk about it with Caroline Polachek
+                      &bull; Local diva injured after experiencing eusexua
+                      &bull; Severe thunderstorm alert, remain indoors ϟ ☁ -7°C                 
                     </p>
-                </div> 
-                <!-- Second Repository -->
-                <div class="repository">
-                    <h3><a href="https://github.com/FrancescoMonaco/LFN_Project" target="_blank">Graph based analysis of the functional connectome in neuropsychiatric disorders</a></h3>
+                  </div>
+                </div>
+              </div>
+            
+            <!-- Box 2 -->
+            <div class="col-md-5 mx-2">
+                <div class="p-4 rounded bg-transparent shadow box">
+                    <h3 class="mb-3 title-font">Links</h3>
                     <p>
-                        The aim of this project is to discuss how brain connectivity is influenced by different diseases. 
-                        Graph analysis is used to report features that can underline the impact of the disease on the
-                        whole brain network. The focus is on neuropsychiatric disorders such as bipolar disorder, ADHD, and
-                        schizophrenia.
-                    </p>
-                </div> 
-                
-                <!-- 3 Repository -->
-                <div class="repository">
-                    <h3><a href="https://github.com/FrancescoMonaco/BiasMedical" target="_blank">Medical Bias</a></h3>
-                    <p>
-                        A project to debias a medical task, using various techniques known in the literature
-                        and providing a comparison between them. This project is strictly related to my Bachelor's thesis.
+                        <a href="https://github.com/FrancescoMonaco"> GitHub</a> 
+                        <br>
+                        <a href="https://www.linkedin.com/in/francescopiomonaco"> LinkedIn</a>
                     </p>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- 4 Repository -->
-                <div class="repository">
-                    <h3><a href="https://github.com/FrancescoMonaco/Sport-Players-Detect-Segment" target="_blank">Player Segmentation</a></h3>
-                    <p>
-                        A project to detect players in sport images, using a lightweight SVM, and segment both players and the
-                        playing field by using a robust non-ML approach. 
-                    </p>
-                </div>
-
-            </div> <!-- End of blurrer -->
-            </div> <!-- End of right column -->
-        </div> <!-- End of row -->
-    </div> <!-- End of wrapper -->
-
-            <!-- Footer -->
-            <div class="footer">
-                <div id="now-playing">
-                <img id="song-artwork" src="" alt="Song Artwork">
-                 <p>Now Playing:&nbsp;</p>
-                 <p id="song-info"></p>
-                </div>
-             </div> <!-- End of footer -->
+    <div class="container mt-3">
+        <img src="/Content/Shell_shrink.gif" alt="You have to wait">
+        <div class="banner-text">
+          &nbsp &nbsp &nbsp I'll update it soon I swear
+      </div>
+    </div>
     
-     <!-- JavaScript to fetch the now-playing song from Last.fm -->
-    <script>
-        const apiKey = '033c98c8bcfa32b05b34dc1f073dc121';
-        const username = 'Piowithoutblood';
-      
-        async function getNowPlaying() {
-          try {
-            const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${username}&api_key=${apiKey}&format=json`);
-            const data = await response.json();
-            const track = data.recenttracks.track[0];
-            const songInfo = `${track.name} by ${track.artist['#text']}`;
-            const songArtwork = track.image[2]['#text']; // Use the URL of the artwork
 
-            // Update the song artwork image
-            const artworkImage = document.getElementById('song-artwork');
-            artworkImage.src = songArtwork;
+    <div id="bottom-banner" class="fixed-bottom-banner">
+        <img src="/Content/webrock.png" alt="Footer Background" class="banner-image">
+        <div class="banner-text"> 
+            FPM 2025
+            <br>
+            
+         </div>
+    </div>
+    
 
-            document.getElementById('song-info').textContent = songInfo;
-          } catch (error) {
-            console.error('Error fetching data from Last.fm:', error);
-          }
-        }
-      
-        // Call the function to get and display the now-playing song
-        getNowPlaying();
-      </script>
-      
+  
+  
+
 </body>
 
 </html>
