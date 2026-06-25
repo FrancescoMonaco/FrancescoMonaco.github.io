@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------------
-	Test
-	Author: piowithoutbllod
-	Version: 0.1
+    Test
+    Author: piowithoutbllod
+    Version: 0.1
 -----------------------------------------------------------------------------------*/
 body {
     margin: 0;
@@ -56,29 +56,45 @@ body {
     color: #a06f14; /* Slightly darker amber on hover */
 }
 
+/* CLEANED MARQUEE ANIMATION WORK */
 
 /* Container for the scrolling text */
 .scroll-container {
     width: 100%;
     overflow: hidden; /* Hide overflowing text */
-    position: relative;
     white-space: nowrap; /* Prevent text from wrapping */
-    box-sizing: border-box;
+    background: transparent;
 }
 
-/* Scrolling text */
+/* The track containing both sets of text side-by-side */
+.scroll-track {
+    display: inline-flex;
+    width: max-content;
+    animation: marquee 15s linear infinite; /* Adjust time here to make it faster/slower */
+}
+
+/* Individual text blocks - Replaced <span> with <p> properties */
 .scroll-text {
     display: inline-block;
-    animation: scroll 25s linear infinite; /* Animate the text scrolling */
+    font-family: 'Base', sans-serif; /* Restores your font */
+    font-size: small;                /* Restores your size */
+    color: #d3d3d3;                  /* Restores your color */
+    padding-right: 2rem;             /* Adds a clean gap before it repeats */
+    margin: 0;                       /* Prevents default paragraph spacing breaking layout */
 }
 
-/* Animation keyframes */
-@keyframes scroll {
+/* Slow down the scrolling when a user hovers */
+.scroll-container:hover .scroll-track {
+    animation-play-state: paused; /* Pauses the animation on hover */
+}
+
+/* The infinite loop magic */
+@keyframes marquee {
     0% {
-        transform: translateX(25%); /* Start off-screen */
+        transform: translateX(0%);
     }
     100% {
-        transform: translateX(-140%); /* End off-screen */
+        transform: translateX(-50%); /* Moves exactly half the track length */
     }
 }
 
@@ -88,20 +104,19 @@ body {
     font-size: 10px;
     align-items: center;
     margin-bottom: 1rem; 
-  }
+}
   
-  .last-fm-info img {
+.last-fm-info img {
     width: 30px;
     height: 30px;
     margin-right: 1rem;
     border-radius: 5px; 
-  }
+}
 
-  .last-fm-info canvas {
+.last-fm-info canvas {
     display: block;
     margin-top: 1rem; /* Add space below the text */
 }
-
 
 /* Bottom banner container */
 .fixed-bottom-banner {
@@ -144,9 +159,6 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
-
-
-
 
 @font-face {
     font-family: 'Dot';
