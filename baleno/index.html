@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BALENO Redirect</title>
+
+  <script>
+    // Change only this URL when you want the QR destination to point elsewhere.
+    const TARGET_URL = "https://github.com/Cecca/panna";
+    document.addEventListener("DOMContentLoaded", () => {
+      const link = document.getElementById("target-link");
+      if (link) {
+        link.href = TARGET_URL;
+      }
+    });
+    window.location.replace(TARGET_URL);
+  </script>
+</head>
+<body>
+  <p>Redirecting to BALENO...</p>
+  <p>If you are not redirected automatically, open
+    <a id="target-link" href="#">the BALENO page</a>.
+  </p>
+</body>
+</html>

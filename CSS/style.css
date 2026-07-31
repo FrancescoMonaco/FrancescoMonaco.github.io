@@ -56,6 +56,16 @@ body {
     color: #a06f14; /* Slightly darker amber on hover */
 }
 
+.links-inline {
+    line-height: 1.9;
+}
+
+.links-inline a {
+    display: inline-block;
+    margin-right: 0.85rem;
+    margin-bottom: 0.35rem;
+}
+
 /* CLEANED MARQUEE ANIMATION WORK */
 
 /* Container for the scrolling text */
