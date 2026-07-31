@@ -172,21 +172,21 @@ body {
 
 @font-face {
     font-family: 'Dot';
-    src: url('/fonts/BPdotsUnicasePlus.otf') format('truetype');
+    src: url('../fonts/BPdotsUnicasePlus.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Multidot';
-    src: url('/fonts/pocketballcond.ttf') format('truetype');
+    src: url('../fonts/pocketballcond.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Base';
-    src: url('/fonts/JetBrainsMono[wght].ttf') format('truetype');
+    src: url('../fonts/JetBrainsMono[wght].ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
